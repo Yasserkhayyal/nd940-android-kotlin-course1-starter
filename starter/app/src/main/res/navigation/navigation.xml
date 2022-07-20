@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/shoesListingFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.udacity.shoestore.login.presentation.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.welcome.presentation.WelcomeFragment"
+        android:label="@string/welcome_fragment_label"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.udacity.shoestore.instructions.presentation.InstructionsFragment"
+        android:label="@string/instructions_fragment_label"
+        tools:layout="@layout/fragment_instructions">
+        <!-- app:popUpTo="@id/shoesListingFragment" didn't work , but app:popUpTo="@id/navigation" did !! -->
+        <action
+            android:id="@+id/action_instructionsFragment_to_shoesListingFragment"
+            app:destination="@id/shoesListingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoesListingFragment"
+        android:name="com.udacity.shoestore.shoesListing.presentation.ShoesListingFragment"
+        android:label="@string/shoes_listing_fragment_label"
+        tools:layout="@layout/fragment_shoes_listing">
+        <action
+            android:id="@+id/action_shoesListingFragment_to_shoesDetailsFragment"
+            app:destination="@id/shoesDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <!-- app:popUpTo="@id/shoesListingFragment" didn't work , but app:popUpTo="@id/navigation" did !! -->
+        <action
+            android:id="@+id/action_shoesListingFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shoesDetailsFragment"
+        android:name="com.udacity.shoestore.shoesDetails.presentation.ShoesDetailsFragment"
+        android:label="@string/shoes_details_fragment_label"
+        tools:layout="@layout/fragment_shoes_details" />
+</navigation>

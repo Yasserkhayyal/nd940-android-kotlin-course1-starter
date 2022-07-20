@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+
+    <!-- navigation labels of screens -->
+    <string name="login_fragment_label">Login</string>
+    <string name="welcome_fragment_label">Welcome</string>
+    <string name="instructions_fragment_label">Instructions</string>
+    <string name="shoes_listing_fragment_label">ShoesListingFragment</string>
+    <string name="shoes_details_fragment_label">ShoesDetailsFragment</string>
+
+    <!-- login screen -->
+    <string name="email_edit_text_hint">Please enter your email address</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="password_et_hint">Please fill in your password</string>
+    <string name="login_btn_text">Login</string>
+    <string name="signup_btn_text">Sign up</string>
+
+    <!-- Welcome screen -->
+    <string name="welcome_heading_text">Welcome to Shoe Store App</string>
+    <string name="welcome_subheading_text">This app is to show the latest shoe trends</string>
+    <string name="show_instructions_text">Show instructions</string>
+
+    <!-- Instructions screen -->
+    <string name="instructions_heading_text">Instructions:</string>
+    <string name="instructions_text">1-Tap continue to navigate to Shoes listing screen\n2-Tap on the \"+\" floating action button to add new shoes\n3-In the Details screen tap on \"Cancel\" to navigate back to Shoes listing screen</string>
+    <string name="continue_text">Continue</string>
+    <string name="logout_text">Logout</string>
+
+    <!-- Shoes Listing screen -->
+    <string name="add_shoes">Add shoes</string>
+
+    <!-- Shoes Details screen -->
+    <string name="shoes_name">Shoes Name</string>
+    <string name="shoes_size">Shoes Size</string>
+    <string name="shoes_company">Shoes Company</string>
+    <string name="shoes_description">Shoes Description</string>
+    <string name="shoes_name_et_hint">Please enter a name</string>
+    <string name="shoes_size_et_hint">Please enter a size</string>
+    <!-- this is the simplest way I found for controlling hint font size, I think it's doesn't support screen sizing though, that is, a version for tablets is needed -->
+    <string name="company_name_et_hint"><font size="14">Please enter a company name</font></string>
+    <string name="shoes_description_et_hint"><font size="15">Please enter a description</font></string>
+    <string name="save_button_text">Save</string>
+    <string name="cancel_btn_text">Cancel</string>
+    <string name="empty_field_error">$s can\'t be empty</string>
 </resources>

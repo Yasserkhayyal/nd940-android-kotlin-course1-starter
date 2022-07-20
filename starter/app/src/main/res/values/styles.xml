@@ -6,7 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@android:color/white</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -15,5 +17,36 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Button style -->
+    <style name="ShoeStoreButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/shoe_store_button_bg</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <!-- TextViews styles -->
+    <style name="MediumTextStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="MediumBoldTextStyle" parent="MediumTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LargeTextStyle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+    </style>
+
+    <style name="LargeBoldTextStyle" parent="LargeTextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ExtraLargeBoldTextStyle" parent="LargeBoldTextStyle">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
 
 </resources>
